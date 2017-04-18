@@ -1,0 +1,41 @@
+body, html {
+  margin 0
+}
+
+.clear-fix
+  display inline-block
+  &:after
+    display block
+    content '.'
+    height 0
+    line-height 0
+    clear both
+    visibility hidden
+
+@media (-webkit-min-device-pixel-ratio: 2.0),(-webkit-max-device-pixel-ratio: 2.0)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0.5)
+      transform: scaleY(0.5)
+
+    &::before
+      -webkit-transform: scaleY(0.5)
+      transform: scaleY(0.5)
+
+@media (-webkit-min-device-pixel-ratio: 3.0),(-webkit-max-device-pixel-ratio: 3.0)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0.333333)
+      transform: scaleY(0.333333)
+    &::before
+      -webkit-transform: scaleY(0.333333)
+      transform: scaleY(0.333333)
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(-webkit-max-device-pixel-ratio: 1.5)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0.666667)
+      transform: scaleY(0.666667)
+    &::before
+      -webkit-transform: scaleY(0.666667)
+      transform: scaleY(0.666667)
